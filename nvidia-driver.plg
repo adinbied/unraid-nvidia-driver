@@ -129,7 +129,7 @@ This plugin satisfies installation prerequisites of the GPU Statistics plugin fr
 #Create settings file if not found
 if [ ! -f "&plugin;/settings.cfg" ]; then
   echo 'first_installation=true
-driver_version=latest
+driver_version=470.94
 local_version=none
 disable_xconfig=false
 update_check=true' > "&plugin;/settings.cfg"
