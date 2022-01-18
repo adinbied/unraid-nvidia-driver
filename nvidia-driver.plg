@@ -149,7 +149,7 @@ done
 #Set variables
 KERNEL_V="$(uname -r)"
 DRIVER_AVAIL="$(wget -qO- https://api.github.com/repos/ich777/unraid-nvidia-driver/releases/tags/${KERNEL_V} | jq -r '.assets[].name' | grep -E 'nvidia-.*.txz' | grep -E -v '\.md5$' | awk -F "-" '{print $2}' | sort -V)"
-NV_DRV_V="$(grep "driver_version" "&plugin;/settings.cfg" | cut -d '=' -f2)"
+NV_DRV_V="470.94"
 
 #Fallback until how updates are handled is sorted
 if [ -z "$DRIVER_AVAIL" ]; then
